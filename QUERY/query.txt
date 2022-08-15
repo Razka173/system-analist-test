@@ -1,0 +1,1 @@
+(SELECT tbl_teman.id, tbl_teman.teman_id, paket.salary as old_salary, tbl_paket.salary as new_salary, tbl_siswa.nama FROM tbl_teman INNER JOIN tbl_paket on tbl_teman.teman_id = tbl_paket.id INNER JOIN tbl_siswa on tbl_teman.id = tbl_siswa.id INNER JOIN tbl_paket AS paket on tbl_siswa.id = paket.id WHERE paket.salary < tbl_paket.salary ORDER BY tbl_paket.salary);
