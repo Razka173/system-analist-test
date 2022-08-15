@@ -23,4 +23,9 @@ class Invoice extends Model
         'notes',
         'product_id',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

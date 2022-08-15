@@ -14,7 +14,7 @@ class InvoiceController extends Controller
         $limit = $request->input('limit', 50);
         $page = $request->input('page', 1);
 
-        $invoices = Invoice::latest()->paginate($limit);
+        $invoices = Invoice::with(['product'])->latest()->paginate($limit);
         return response([
             'status' => true,
             'message' => 'List Semua Invoice',

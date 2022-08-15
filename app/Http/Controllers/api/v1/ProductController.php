@@ -14,7 +14,7 @@ class ProductController extends Controller
         $limit = $request->input('limit', 50);
         $page = $request->input('page', 1);
 
-        $products = Product::latest()->paginate($limit);
+        $products = Product::with(['invoices'])->latest()->paginate($limit);
         return response([
             'status' => true,
             'message' => 'List Semua Produk',
