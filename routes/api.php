@@ -26,11 +26,11 @@ Route::get('/v1/products', [ProductController::class, 'index']);
 Route::get('/v1/products/{id?}', [ProductController::class, 'show']);
 Route::post('/v1/products/store', [ProductController::class, 'store']);
 Route::post('/v1/products/update', [ProductController::class, 'update']);
-Route::delete('/v1/products/{id?}', [ProductController::class, 'destroy']);
+Route::delete('/v1/products/delete/{id?}', [ProductController::class, 'destroy']);
 
 
 Route::get('/v1/invoices', [InvoiceController::class, 'index']);
 Route::get('/v1/invoices/{id?}', [InvoiceController::class, 'show']);
 Route::post('/v1/invoices/store', [InvoiceController::class, 'store']);
 Route::post('/v1/invoices/update', [InvoiceController::class, 'update']);
-Route::delete('/v1/invoices/{id?}', [InvoiceController::class, 'destroy']);
+Route::delete('/v1/invoices/delete/{id?}', [InvoiceController::class, 'destroy']);
