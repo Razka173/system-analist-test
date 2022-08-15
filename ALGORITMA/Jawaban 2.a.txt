@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$array = [23, 76, 45, 20, 70, 65, 15, 54];
+echo max($array);
+?>
+
+</body>
+</html>

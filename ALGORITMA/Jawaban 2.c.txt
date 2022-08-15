@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$string = 'https://bola.okezone.com/read/2022/08/05/47/2642706/juventus-butu
+h-paul-pogba-ini-harapan-massimiliano-allegri';
+
+$pieces = explode('-', $string);
+$last_word = array_pop($pieces);
+echo $last_word;
+?>
+
+</body>
+</html>
